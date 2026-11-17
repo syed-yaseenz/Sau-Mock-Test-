@@ -1,50 +1,31 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const testLinks = document.querySelectorAll('.test-btn');
-    const totalViewsElement = document.getElementById('total-views');
+    // Total test clicks on this device
+    const counter = document.getElementById("total-views");
+    const storageKey = "sau_mock_test_clicks";
 
-    const storageKey = 'sau-mock-test-clicks';
+    let totalClicks = Number(localStorage.getItem(storageKey)) || 0;
 
-    let clicks = {};
-
-    try {
-        clicks = JSON.parse(localStorage.getItem(storageKey)) || {};
-    } catch (error) {
-        clicks = {};
+    if (counter) {
+        counter.textContent = totalClicks;
     }
 
-    function updateTotal() {
-        const total = Object.values(clicks).reduce(
-            (sum, value) => sum + (Number(value) || 0),
-            0
-        );
+    // Count test button clicks
+    document.querySelectorAll(".test-btn").forEach(function (button) {
 
-        if (totalViewsElement) {
-            totalViewsElement.textContent = total.toLocaleString('en-US');
-        }
-    }
+        button.addEventListener("click", function () {
 
-    testLinks.forEach(function (link) {
+            totalClicks++;
 
-        const testId = link.dataset.test;
+            localStorage.setItem(storageKey, totalClicks);
 
-        link.addEventListener('click', function () {
-
-            clicks[testId] = (Number(clicks[testId]) || 0) + 1;
-
-            try {
-                localStorage.setItem(storageKey, JSON.stringify(clicks));
-            } catch (error) {
-                console.warn('Unable to save local test clicks.');
+            if (counter) {
+                counter.textContent = totalClicks;
             }
-
-            updateTotal();
 
         });
 
     });
-
-    updateTotal();
 
 });
