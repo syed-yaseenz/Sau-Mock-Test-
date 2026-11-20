@@ -614,7 +614,6 @@ footer a {
         font-size: 13px;
     }
 
-}
 
 /* =================================
    REGISTRATION REMINDER
@@ -679,6 +678,34 @@ footer a {
 
 .registration-reminder a i {
     font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .registration-reminder {
+        padding: 15px;
+        margin: 15px 0 20px;
+        border-radius: 11px;
+    }
+
+    .registration-reminder h3 {
+        font-size: 15px;
+    }
+
+    .registration-reminder p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .registration-reminder a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
 }
 
 /* MOBILE RESPONSIVE */
