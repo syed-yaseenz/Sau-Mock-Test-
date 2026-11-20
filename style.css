@@ -616,3 +616,96 @@ footer a {
 
 }
 
+/* =================================
+   REGISTRATION REMINDER
+================================= */
+
+.registration-reminder {
+    background: linear-gradient(135deg, #f4f2ff, #ffffff);
+    border: 1px solid #dcd7ff;
+    border-left: 5px solid #5146c8;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 18px 0 22px;
+    box-shadow: 0 4px 15px rgba(81, 70, 200, 0.08);
+}
+
+.registration-reminder h3 {
+    color: #5146c8;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.registration-reminder h3 i {
+    font-size: 19px;
+}
+
+.registration-reminder p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+.registration-reminder p strong {
+    color: #5146c8;
+}
+
+.registration-reminder a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: #5146c8;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(81, 70, 200, 0.2);
+}
+
+.registration-reminder a:hover {
+    background: #3f35a8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(81, 70, 200, 0.3);
+}
+
+.registration-reminder a i {
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .registration-reminder {
+        padding: 15px;
+        margin: 15px 0 20px;
+        border-radius: 11px;
+    }
+
+    .registration-reminder h3 {
+        font-size: 15px;
+    }
+
+    .registration-reminder p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .registration-reminder a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
+}
+
