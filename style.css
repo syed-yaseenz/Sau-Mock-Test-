@@ -735,21 +735,31 @@ footer a {
     }
 
 
-/* REGISTER HERE BUTTON */
+
+/* REGISTER HERE BUTTON - DESKTOP & MOBILE */
 
 .registration-reminder a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
+
     background: #5146c8;
     color: #ffffff;
     text-decoration: none;
+
     padding: 12px 22px;
     border-radius: 8px;
+
     font-size: 13px;
     font-weight: 700;
+    line-height: 1.5;
+
+    max-width: 100%;
+    box-sizing: border-box;
+
     transition: all 0.3s ease;
+
     box-shadow: 0 4px 12px rgba(81, 70, 200, 0.20);
 }
 
@@ -761,16 +771,42 @@ footer a {
 
 .registration-reminder a i {
     font-size: 14px;
+    flex-shrink: 0;
 }
 
-/* Mobile Responsive */
+/* TABLET VIEW */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .registration-reminder a {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 480px) {
+    .registration-reminder a {
+        display: flex;
         width: 100%;
-        box-sizing: border-box;
-        padding: 12px 15px;
+        padding: 12px 10px;
+        font-size: 12px;
+        gap: 7px;
+        border-radius: 7px;
+        text-align: center;
+    }
+
+    .registration-reminder a i {
         font-size: 12px;
     }
 }
- 
+
+/* SMALL MOBILE VIEW */
+
+@media (max-width: 360px) {
+    .registration-reminder a {
+        font-size: 11px;
+        padding: 11px 7px;
+        gap: 5px;
+    }
+}
